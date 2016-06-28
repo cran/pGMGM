@@ -1,0 +1,5 @@
+LAPACK_LIBS=`"${R_HOME}/bin/R" CMD config LAPACK_LIBS`
+AC_ARG_WITH([lapack],
+	AC_HELP_STRING([--with-lapack=LIB_PATH],
+		[LAPACK library location with complex routines]),
+		[LAPACK_LIBS=$withval])
